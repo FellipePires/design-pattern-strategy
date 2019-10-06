@@ -3,6 +3,7 @@ package br.com.fthomasvp.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.fthomasvp.interfaces.Payment;
 import br.com.fthomasvp.model.Movie;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,9 @@ public class ShoppingCart {
     if (movie == null)
       return false;
 
+    if (this.movieList.contains(movie))
+      return false;
+
     this.movieList.add(movie);
 
     return true;
@@ -29,6 +33,9 @@ public class ShoppingCart {
 
   public Boolean removeMovie(Movie movie) {
     if (movie == null)
+      return false;
+
+    if (!this.movieList.contains(movie))
       return false;
 
     this.movieList.remove(movie);
