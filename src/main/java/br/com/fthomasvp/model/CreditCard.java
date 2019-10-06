@@ -1,6 +1,6 @@
 package br.com.fthomasvp.model;
 
-import br.com.fthomasvp.controller.Payment;
+import br.com.fthomasvp.interfaces.Payment;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
